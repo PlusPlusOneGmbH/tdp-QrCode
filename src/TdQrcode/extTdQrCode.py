@@ -5,7 +5,7 @@ Saveorigin : Project.toe
 Saveversion : 2023.12000
 Info Header End'''
 
-import qrcode
+from qrcode import QRCode, constants
 import io
 
 class extTdQrCode:
@@ -18,10 +18,18 @@ class extTdQrCode:
 		
 
 	def Generate_QrCodeBytes(self, target):
-		qr_image = qrcode.make( 	target, 
-									box_size = self.ownerComp.par.Fieldsize.eval(), 
-									border = self.ownerComp.par.Bordersize.eval() 
-								)
+
+		qr_maker = QRCode(
+			border		= self.ownerComp.par.Bordersize.eval(),
+			box_size	= self.ownerComp.par.Fieldsize.eval(),
+			version		= self.ownerComp.par.Version.eval(),
+			error_correction = getattr( constants, f"ERROR_CORRECT_{self.ownerComp.par.Errorcorrection.eval()}" ),
+		)
+		qr_maker.add_data( self.ownerComp.par.Text.eval() )
+		qr_maker.make(fit=True)
+		qr_image = qr_maker.make_image()
+
 		byteIO = io.BytesIO()
 		qr_image.save( byteIO, format = "PNG")
+		
 		return bytearray( byteIO.getvalue() )

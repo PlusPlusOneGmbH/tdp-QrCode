@@ -106,7 +106,7 @@ pil = [
 
 [[package]]
 name = "tdp-qrcode"
-version = "0.0.1"
+version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "qrcode", extra = ["pil"], marker = "sys_platform == 'darwin' or sys_platform == 'win32'" },

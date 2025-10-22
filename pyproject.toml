@@ -1,6 +1,6 @@
 [project]
 name = "tdp-QrCode"
-version = "0.0.1"
+version = "0.1.0"
 description = "A prefab for TouchDesigner-Projects that will be complelty managed and run by UV."
 readme = "README.md"
 keywords=["TouchDesigner", "TOP", "QrCode"]
