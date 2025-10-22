@@ -3,13 +3,19 @@ name = "tdp-QrCode"
 version = "0.0.1"
 description = "A prefab for TouchDesigner-Projects that will be complelty managed and run by UV."
 readme = "README.md"
-keywords=["TouchDesigner"]
-authors = []                    # Required for PyPi-Publishing
+keywords=["TouchDesigner", "TOP", "QrCode"]
+authors = [
+    {name = "Wieland Hilker", email = "wieland@plusplus.one"},
+]               # Required for PyPi-Publishing
 license-files = ["LICENSE"]     # Do not forgot to adjust ;)
 requires-python = ">=3.11"
 dependencies = [
     "qrcode[pil]>=8.2",
 ]
+
+[project.urls]
+Website = "https://plusplus.one"
+Repository = "https://github.com/PlusPlusOneGmbH/tdp-QrCode"
 
 [tool.uv]
 environments = [
