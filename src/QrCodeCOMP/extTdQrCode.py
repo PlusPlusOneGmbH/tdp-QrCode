@@ -17,7 +17,7 @@ class extTdQrCode:
 		self.ownerComp = ownerComp
 		
 
-	def Generate_QrCodeBytes(self, target):
+	def Generate_QrCodeBytes(self, target_text = None):
 
 		qr_maker = QRCode(
 			border		= self.ownerComp.par.Bordersize.eval(),
@@ -25,7 +25,7 @@ class extTdQrCode:
 			version		= self.ownerComp.par.Version.eval(),
 			error_correction = getattr( constants, f"ERROR_CORRECT_{self.ownerComp.par.Errorcorrection.eval()}" ),
 		)
-		qr_maker.add_data( self.ownerComp.par.Text.eval() )
+		qr_maker.add_data( target_text or self.ownerComp.par.Text.eval() )
 		qr_maker.make(fit=True)
 		qr_image = qr_maker.make_image()
 

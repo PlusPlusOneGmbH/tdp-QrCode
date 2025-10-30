@@ -17,4 +17,15 @@ if TYPE_CHECKING:
 else:
     Typing = None
 
+
+DefaultGlobalOpShortcut = "QRCODECOMP"
+
+__minimum_td_version__ = "2023.1200"
+
+# Futureprrofing for automated search of toxfiles and imports.
+_ToxFiles = {
+    "QrCodeCOMP" : ToxFile
+}
+
+
 __all__ = ["ToxFile", "Typing"]

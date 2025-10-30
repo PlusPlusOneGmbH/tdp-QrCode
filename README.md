@@ -1,9 +1,9 @@
 # TDP QR-CodeGenerator
 Fully implements the TDP Structure.
 
-```uv add tdp-QrCode``` or ```pip install tdp-QrCode```
+```uv add tdp-QrCodeCOMP``` or ```pip install tdp-QrCodeCOMP```
 
-Use ```mod.TdQrcode.ToxFile``` as refference to implement the external tox.
+Use ```mod.QrCodeCOMP.ToxFile``` as refference to implement the external tox.
 
 ## Parameters
 __Text:__ The text of the qrcode.
