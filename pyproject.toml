@@ -1,7 +1,7 @@
 [project]
 name = "tdp-QrCodeCOMP"
-version = "0.1.0"
-description = "A prefab for TouchDesigner-Projects that will be complelty managed and run by UV."
+version = "0.2.1"
+description = "A Component to generate QR Codes."
 readme = "README.md"
 keywords=["TouchDesigner", "TOP", "QrCode"]
 authors = [

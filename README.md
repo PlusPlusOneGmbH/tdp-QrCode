@@ -1,9 +1,11 @@
 # TDP QR-CodeGenerator
+_Breaking Change: Change Path from QrCode to tdpQrCodeCOMP_
+
 Fully implements the TDP Structure.
 
 ```uv add tdp-QrCodeCOMP``` or ```pip install tdp-QrCodeCOMP```
 
-Use ```mod.QrCodeCOMP.ToxFile``` as refference to implement the external tox.
+Use ```mod.tdpQrCodeCOMP.ToxFile``` as refference to implement the external tox.
 
 ## Parameters
 __Text:__ The text of the qrcode.
@@ -17,9 +19,9 @@ __Version:__ The size and repetition.
 __Errorcorrection:__ Level of errorcorrection,
 
 ## Inputs
-__colorLookup:__ A ramp to define the black and white value.
+__colorLookup -> TOP:__ A ramp to define the black and white value.
 
 ## Outputs
-__original_out:__ The top in the original, generated resolution.
+__original_out -> TOP:__ The top in the original, generated resolution.
 
-__rescaled_top:__ The QRCode crispy rescaled to 256*256.
+__rescaled_top - TOP:__ The QRCode crispy rescaled to 256*256.
